@@ -16,4 +16,5 @@ public class Node {
 		return "Node {"+ "data =" +data +", next =" + next + '}';
 				
 	}
+
 }
