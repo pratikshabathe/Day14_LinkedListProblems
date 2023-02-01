@@ -12,7 +12,7 @@ public class LinkedListProblem {
 	 Node head;
 	    Node tail;
 
-	    public  void push(int data) {
+	   void push(int data) {
 	        Node newNode = new Node(data);
 	        if (head == null) {
 	            head = newNode;
@@ -24,7 +24,7 @@ public class LinkedListProblem {
 	        
 	    }
 	    
-	    public void add(int data) {
+	   void add(int data) {
 	        Node newNode = new Node(data);
 	        if (head == null) {
 	            head = newNode;
@@ -35,8 +35,19 @@ public class LinkedListProblem {
 	        }
 	        
 	    }
+	   
+	   void insert(int data) {
+		   
+		   Node node = new Node(data);
+		   Node thisNode = head;
+		   while(thisNode != null) {
+			   thisNode = node; 
+		   }
+		  // head.next = node;
+		  // node.next = tail;
+	   }
 
-	    public void print() {
+	   void print() {
 	            Node temp = head;
 	            while (temp != null) {
 	                System.out.print(temp.data+ " ");
@@ -51,9 +62,9 @@ public class LinkedListProblem {
 	        
 	        Scanner scanner = new Scanner(System.in);
 	        LinkedList linkedList = new LinkedList();
-  	        linkedList.push(56);
-  	        linkedList.push(30);
   	        linkedList.push(70);
+  	        linkedList.push(30);
+  	        linkedList.push(56);
   	     
   	      System.out.printf(" add the data at the end: " +linkedList);
 	    }
